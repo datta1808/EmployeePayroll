@@ -29,7 +29,7 @@ public class EmployeePayrollService {
         employeePayrollDataList.add(new EmployeePayrollData(id, name, salary));
     }
 
-    private void writeEmployeePayrollData(){
+    private void writeEmployeePayrollData() {
         System.out.println("Writing employee payroll to console\n" + employeePayrollDataList);
     }
 

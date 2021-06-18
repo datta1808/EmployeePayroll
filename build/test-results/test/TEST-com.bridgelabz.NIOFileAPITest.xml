@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.NIOFileAPITest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-18T10:27:57" hostname="LAPTOP-OKMRMTOT" time="0.099">
+  <properties/>
+  <testcase name="givenPath_whenChecked_thenConfirm" classname="com.bridgelabz.NIOFileAPITest" time="0.099"/>
+  <system-out><![CDATA[C:\Users\bagal\TempPlayground\temp1
+C:\Users\bagal\TempPlayground\temp2
+C:\Users\bagal\TempPlayground\temp3
+C:\Users\bagal\TempPlayground\temp4
+C:\Users\bagal\TempPlayground\temp5
+C:\Users\bagal\TempPlayground\temp6
+C:\Users\bagal\TempPlayground\temp7
+C:\Users\bagal\TempPlayground\temp8
+C:\Users\bagal\TempPlayground\temp9
+C:\Users\bagal\TempPlayground\temp1
+C:\Users\bagal\TempPlayground\temp2
+C:\Users\bagal\TempPlayground\temp3
+C:\Users\bagal\TempPlayground\temp4
+C:\Users\bagal\TempPlayground\temp5
+C:\Users\bagal\TempPlayground\temp6
+C:\Users\bagal\TempPlayground\temp7
+C:\Users\bagal\TempPlayground\temp8
+C:\Users\bagal\TempPlayground\temp9
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

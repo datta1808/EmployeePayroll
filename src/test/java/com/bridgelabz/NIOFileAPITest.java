@@ -10,9 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.stream.IntStream;
-
 public class NIOFileAPITest {
-
     public static final String HOME = System.getProperty("user.home");
     public static final String PLAY_WITH_NIO = "TempPlayground";
 
@@ -53,7 +51,7 @@ public class NIOFileAPITest {
     }
 
     @Test
-    public void givenDirectory_WhenWatched_listsAllTheActivities() throws IOException {
+    public void givenDirectory_WhenWatched_listsAllTheActivites() throws IOException {
         Path dir = Paths.get(HOME + "/" + PLAY_WITH_NIO);
         Files.list(dir).filter(Files::isRegularFile).forEach(System.out::println);
         new FileWatchService(dir).processEvents();
@@ -66,10 +64,13 @@ public class NIOFileAPITest {
                 new EmployeePayrollData(2, "Bill Gates", 200000.0),
                 new EmployeePayrollData(3, "Mark Zuckerberg", 300000.0)
         };
-
         EmployeePayrollService employeePayrollService = new EmployeePayrollService(Arrays.asList(empArray));
         employeePayrollService.writeEmployeeData(EmployeePayrollService.IOService.FILE_IO);
+        employeePayrollService.printData(EmployeePayrollService.IOService.FILE_IO);
+
         long entries = employeePayrollService.countEntries(EmployeePayrollService.IOService.FILE_IO);
+        System.out.println("No.of entries into file are: " + entries);
+
         Assert.assertEquals(3, entries);
     }
 }

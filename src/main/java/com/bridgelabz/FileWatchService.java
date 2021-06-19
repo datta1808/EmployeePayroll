@@ -43,6 +43,7 @@ public class FileWatchService {
             } catch (InterruptedException e) {
                 return;
             }
+
             Path dir = dirWatchers.get(key);
             if (dir == null) continue;
             for (WatchEvent<?> event : key.pollEvents()) {
@@ -66,6 +67,7 @@ public class FileWatchService {
                 }
 
             }
+
             boolean valid = key.reset();
             if (!valid) {
                 dirWatchers.remove(key);

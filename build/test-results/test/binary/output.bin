@@ -1,31 +1,22 @@
-%C:\Users\bagal\TempPlayground\temp1
-%C:\Users\bagal\TempPlayground\temp2
-%C:\Users\bagal\TempPlayground\temp3
-%C:\Users\bagal\TempPlayground\temp4
-%C:\Users\bagal\TempPlayground\temp5
-%C:\Users\bagal\TempPlayground\temp6
-%C:\Users\bagal\TempPlayground\temp7
-%C:\Users\bagal\TempPlayground\temp8
-%C:\Users\bagal\TempPlayground\temp9
-%C:\Users\bagal\TempPlayground\temp1
-%C:\Users\bagal\TempPlayground\temp2
-%C:\Users\bagal\TempPlayground\temp3
-%C:\Users\bagal\TempPlayground\temp4
-%C:\Users\bagal\TempPlayground\temp5
-%C:\Users\bagal\TempPlayground\temp6
-%C:\Users\bagal\TempPlayground\temp7
-%C:\Users\bagal\TempPlayground\temp8
-%C:\Users\bagal\TempPlayground\temp9
-?EmployeePayrollData{name='Jeff Bezos', id=1, salary=100000.0}
-?EmployeePayrollData{name='Bill Gates', id=2, salary=200000.0}
-DEmployeePayrollData{name='Mark Zuckerberg', id=3, salary=300000.0}
- No.of entries into file are: 3
-%C:\Users\bagal\TempPlayground\temp1
-%C:\Users\bagal\TempPlayground\temp2
-%C:\Users\bagal\TempPlayground\temp3
-%C:\Users\bagal\TempPlayground\temp4
-%C:\Users\bagal\TempPlayground\temp5
-%C:\Users\bagal\TempPlayground\temp6
-%C:\Users\bagal\TempPlayground\temp7
-%C:\Users\bagal\TempPlayground\temp8
-%C:\Users\bagal\TempPlayground\temp9
+%C:\Users\bagal\TempPlayground\temp1
+%C:\Users\bagal\TempPlayground\temp2
+%C:\Users\bagal\TempPlayground\temp3
+%C:\Users\bagal\TempPlayground\temp4
+%C:\Users\bagal\TempPlayground\temp5
+%C:\Users\bagal\TempPlayground\temp6
+%C:\Users\bagal\TempPlayground\temp7
+%C:\Users\bagal\TempPlayground\temp8
+%C:\Users\bagal\TempPlayground\temp9
+%C:\Users\bagal\TempPlayground\temp1
+%C:\Users\bagal\TempPlayground\temp2
+%C:\Users\bagal\TempPlayground\temp3
+%C:\Users\bagal\TempPlayground\temp4
+%C:\Users\bagal\TempPlayground\temp5
+%C:\Users\bagal\TempPlayground\temp6
+%C:\Users\bagal\TempPlayground\temp7
+%C:\Users\bagal\TempPlayground\temp8
+%C:\Users\bagal\TempPlayground\temp9
+?EmployeePayrollData{name='Jeff Bezos', id=1, salary=100000.0}
+?EmployeePayrollData{name='Bill Gates', id=2, salary=200000.0}
+DEmployeePayrollData{name='Mark Zuckerberg', id=3, salary=300000.0}
+ No.of entries into file are: 3

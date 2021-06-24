@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-24T16:55:33" hostname="LAPTOP-OKMRMTOT" time="0.024">
+  <properties/>
+  <testcase name="numberOfEmployeeEntryTest" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.024"/>
+  <system-out><![CDATA[EmployeePayrollData{name='Jeff Bezos', id=1, salary=100000.0}
+EmployeePayrollData{name='Bill Gates', id=2, salary=200000.0}
+EmployeePayrollData{name='Mark Zuckerberg', id=3, salary=300000.0}
+No.of entries into file are: 3
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

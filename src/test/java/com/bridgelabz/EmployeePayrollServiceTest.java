@@ -3,7 +3,9 @@ package com.bridgelabz;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.List;
 
 public class EmployeePayrollServiceTest {
 
@@ -23,5 +25,12 @@ public class EmployeePayrollServiceTest {
         System.out.println("No.of entries into file are: " + entries);
 
         Assert.assertEquals(3, entries);
+    }
+
+    @Test
+    public void givenEmployeePayrollInDB_WhenRetrievedShouldMatchEmployeeCount() throws SQLException {
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        List<EmployeePayrollData> employeePayrollData = employeePayrollService.readEmployeePayrollData(EmployeePayrollService.IOService.DB_IO);
+        Assert.assertEquals(3, employeePayrollData.size());
     }
 }

@@ -1,14 +1,22 @@
 package com.bridgelabz;
 
+import java.time.LocalDate;
+
 public class EmployeePayrollData {
     private String name;
     private int id;
     private double salary;
+    public LocalDate startDate;
 
     public EmployeePayrollData(int id, String name, double salary) {
         this.name = name;
         this.id = id;
         this.salary = salary;
+    }
+
+    public EmployeePayrollData(int id, String name, double salary, LocalDate startDate) {
+        this(id, name, salary);
+        this.startDate = startDate;
     }
 
     public String getName() {

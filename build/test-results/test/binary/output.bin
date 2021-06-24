@@ -1,4 +1,2 @@
-?EmployeePayrollData{name='Jeff Bezos', id=1, salary=100000.0}
-?EmployeePayrollData{name='Bill Gates', id=2, salary=200000.0}
-DEmployeePayrollData{name='Mark Zuckerberg', id=3, salary=300000.0}
- No.of entries into file are: 3
+PConnecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
+GConnection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@3a8f6c9e

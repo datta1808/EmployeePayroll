@@ -3,9 +3,9 @@ package com.bridgelabz;
 import java.time.LocalDate;
 
 public class EmployeePayrollData {
-    private String name;
+    public String name;
     private int id;
-    private double salary;
+    public double salary;
     public LocalDate startDate;
 
     public EmployeePayrollData(int id, String name, double salary) {
@@ -50,5 +50,15 @@ public class EmployeePayrollData {
                 ", id=" + id +
                 ", salary=" + salary +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EmployeePayrollData that = (EmployeePayrollData) o;
+        return id == that.id &&
+                Double.compare(that.salary, salary) == 0 &&
+                name.equals(that.name);
     }
 }

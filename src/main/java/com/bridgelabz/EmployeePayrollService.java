@@ -15,7 +15,7 @@ public class EmployeePayrollService {
     private List<EmployeePayrollData> employeePayrollDataList;
     private EmployeePayrollDBService  employeePayrollDBService;
 
-    public EmployeePayrollService(){
+    public EmployeePayrollService() {
         employeePayrollDBService = EmployeePayrollDBService.getInstance();
     }
 

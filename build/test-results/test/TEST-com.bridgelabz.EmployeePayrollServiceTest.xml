@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-26T03:19:46" hostname="LAPTOP-OKMRMTOT" time="1.332">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-26T03:54:31" hostname="LAPTOP-OKMRMTOT" time="0.58">
   <properties/>
-  <testcase name="givenDateRange_WhenRetrievedEmployeeData_ShouldMatchEmployeeCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.332"/>
+  <testcase name="givenEmployeePayrollDB_WhenRetrievedSumOfSalaryByGender_ShouldAssertEquals" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.58"/>
   <system-out><![CDATA[Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@31c196ed
 Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@4e58e87b
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@68d30f62
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

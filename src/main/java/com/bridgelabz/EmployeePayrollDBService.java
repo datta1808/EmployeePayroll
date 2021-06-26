@@ -178,6 +178,7 @@ public class EmployeePayrollDBService {
             }
         }
 
+
             try (Statement statement = connection.createStatement()) {
                 double deductions = salary * 0.2;
                 double taxablePay = salary - deductions;

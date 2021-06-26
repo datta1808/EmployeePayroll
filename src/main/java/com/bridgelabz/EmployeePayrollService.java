@@ -1,6 +1,7 @@
 package com.bridgelabz;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -35,10 +36,16 @@ public class EmployeePayrollService {
         employeePayrollDataList.add(new EmployeePayrollData(id, name, salary));
     }
 
-    public List<EmployeePayrollData> readEmployeePayrollData(IOService ioService) throws SQLException {
+    public List<EmployeePayrollData> readEmployeePayrollData(IOService ioService) {
         if (ioService.equals(IOService.DB_IO))
             this.employeePayrollDataList = employeePayrollDBService.readData();
         return this.employeePayrollDataList;
+    }
+
+    public List<EmployeePayrollData> readEmployeePayrollForDataRange(IOService ioService, LocalDate startDate, LocalDate endDate) {
+        if(ioService.equals(IOService.DB_IO))
+            return employeePayrollDBService.getEmployeePayrollForDateRange(startDate, endDate);
+        return null;
     }
 
     public boolean checkEmployeePayrollInSyncWithDB(String name) {
@@ -94,7 +101,7 @@ public class EmployeePayrollService {
     }
 
     public static void main(String[] args) {
-        ArrayList<EmployeePayrollData> employeePayrollDataList = new ArrayList<EmployeePayrollData>();
+        ArrayList<EmployeePayrollData> employeePayrollDataList = new ArrayList<>();
         EmployeePayrollService employeePayrollService = new EmployeePayrollService(employeePayrollDataList);
         Scanner sc = new Scanner(System.in);
         employeePayrollService.readEmployeePayrollData(sc);

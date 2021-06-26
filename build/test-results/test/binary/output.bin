@@ -1,6 +1,4 @@
 PConnecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
 GConnection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@31c196ed
 PConnecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-GConnection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@1651cbfc
-PConnecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-GConnection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@2922754d
+GConnection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@4e58e87b

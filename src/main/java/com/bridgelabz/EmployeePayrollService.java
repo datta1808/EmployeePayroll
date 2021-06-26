@@ -1,6 +1,5 @@
 package com.bridgelabz;
 
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -69,6 +68,10 @@ public class EmployeePayrollService {
                    .filter(employeePayrollDataItem -> employeePayrollDataItem.name.equals(name))
                    .findFirst()
                    .orElse(null);
+    }
+
+    public void addEmployeeToPayroll(String name, double salary, LocalDate startDate, String gender) {
+        employeePayrollDataList.add(employeePayrollDBService.addEmployeeToPayroll(name, salary, startDate, gender));
     }
 
     private void writeEmployeePayrollData(){

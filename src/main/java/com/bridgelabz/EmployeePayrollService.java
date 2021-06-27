@@ -1,13 +1,10 @@
 package com.bridgelabz;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.*;
 
 public class EmployeePayrollService {
-
-    public enum IOService {
-        CONSOLE_IO, FILE_IO, DB_IO, REST_IO
-    }
 
     private List<EmployeePayrollData> employeePayrollDataList;
     private EmployeePayrollDBService  employeePayrollDBService;
@@ -72,6 +69,21 @@ public class EmployeePayrollService {
 
     public void addEmployeeToPayroll(String name, double salary, LocalDate startDate, String gender) {
         employeePayrollDataList.add(employeePayrollDBService.addEmployeeToPayroll(name, salary, startDate, gender));
+    }
+
+    public void addEmployeeToDepartment(String name,  Double salary, LocalDate startDate,String gender, String department) {
+        this.employeePayrollDataList.add(employeePayrollDBService.addEmployeeToDepartment(name,  salary, startDate, gender, department));
+    }
+
+    //check whether the updated record matches the record of database
+    public boolean checkEmployeeDataSync(String name) {
+        List<EmployeePayrollData> employees = null;
+        employees = employeePayrollDBService.getEmployeePayrollData(name);
+        return employees.get(0).equals(getEmployeePayrollData(name));
+    }
+
+    public enum IOService {
+        CONSOLE_IO, FILE_IO, DB_IO, REST_IO
     }
 
     private void writeEmployeePayrollData(){

@@ -177,9 +177,7 @@ public class EmployeePayrollDBService {
                 ex.printStackTrace();
             }
         }
-
-
-            try (Statement statement = connection.createStatement()) {
+        try (Statement statement = connection.createStatement()) {
                 double deductions = salary * 0.2;
                 double taxablePay = salary - deductions;
                 double tax = taxablePay * 0.1;
@@ -214,5 +212,25 @@ public class EmployeePayrollDBService {
                 }
             }
             return employeePayrollData;
+    }
+
+    //Add Employee to the department
+    public EmployeePayrollData addEmployeeToDepartment(String name, Double salary, LocalDate startDate, String gender,
+                                            String department) {
+        EmployeePayrollData employee = addEmployeeToPayroll(name, salary, startDate, gender);
+        int employeeId = -1;
+        String sql = String.format(
+                "INSERT INTO department (employee_id,department_id, department_name) " + "VALUES ('%s','%s','%s')",
+                employeeId, 1, department);
+        try (Connection connection = this.getConnection()) {
+            Statement statement = connection.createStatement();
+            int rowAffected = statement.executeUpdate(sql);
+            if (rowAffected == 1) {
+                employee = new EmployeePayrollData(employeeId, name, gender, salary, startDate, department);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return employee;
     }
 }

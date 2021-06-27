@@ -72,4 +72,14 @@ public class EmployeePayrollServiceTest {
         boolean result = employeePayrollService.checkEmployeePayrollInSyncWithDB("Mark");
         Assert.assertTrue(result);
     }
+
+
+    @Test
+    public void givenNewEmployee_WhenAddedToPayroll_ShouldBeAddedToDepartment() {
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        employeePayrollService.readEmployeePayrollData(EmployeePayrollService.IOService.DB_IO);
+        employeePayrollService.addEmployeeToDepartment("Max", 400000.00, LocalDate.now(), "M", "Sales");
+        boolean result = employeePayrollService.checkEmployeeDataSync("Max");
+        Assert.assertTrue(result);
+    }
 }

@@ -81,6 +81,17 @@ public class EmployeePayrollService {
         return employees.get(0).equals(getEmployeePayrollData(name));
     }
 
+    public List<EmployeePayrollData> deleteEmployee(String name) {
+        employeePayrollDBService.deleteEmployee(name);
+        return readEmployeePayrollData(IOService.DB_IO);
+    }
+
+    public List<EmployeePayrollData> removeEmployeeFromPayroll(int id) {
+        List<EmployeePayrollData> activeEmployees = null;
+        activeEmployees = employeePayrollDBService.removeEmployeeFromCompany(id);
+        return activeEmployees;
+    }
+
     public enum IOService {
         CONSOLE_IO, FILE_IO, DB_IO, REST_IO
     }

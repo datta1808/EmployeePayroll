@@ -65,6 +65,7 @@ public class EmployeePayrollServiceTest {
                 averageSalaryByGender.get("F").equals(3000000.00));
     }
 
+
     @Test
     public void givenNewEmployee_WhenAdded_ShouldSyncWithDatabase() {
         EmployeePayrollService employeePayrollService = new EmployeePayrollService();
@@ -82,5 +83,12 @@ public class EmployeePayrollServiceTest {
         employeePayrollService.addEmployeeToDepartment("Max", 400000.00, LocalDate.now(), "M", "Sales");
         boolean result = employeePayrollService.checkEmployeeDataSync("Max");
         Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenEmployeeId_WhenRemoved_shouldReturnNumberOfActiveEmployees() {
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        List<EmployeePayrollData> ActiveEmployees = employeePayrollService.removeEmployeeFromPayroll(3);
+        Assert.assertEquals(5, ActiveEmployees.size());
     }
 }

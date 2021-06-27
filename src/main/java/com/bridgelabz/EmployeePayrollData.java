@@ -5,10 +5,11 @@ import java.util.Objects;
 
 public class EmployeePayrollData {
     public String name;
-    private int id;
+    public int id;
     public double salary;
     public LocalDate startDate;
     public String department;
+    public boolean is_active;
 
 
     public EmployeePayrollData(int id, String name, double salary) {

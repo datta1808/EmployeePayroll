@@ -233,4 +233,26 @@ public class EmployeePayrollDBService {
         }
         return employee;
     }
+
+    public List<EmployeePayrollData> removeEmployeeFromCompany(int id) {
+        List<EmployeePayrollData> Employees = this.readData();
+        Employees.forEach(employee -> {
+            if (employee.id == id) {
+                employee.is_active = false;
+            }
+        });
+        return Employees;
+    }
+
+    //Delete employee from the payroll
+    public void deleteEmployee(String name) {
+        String sql = String.format("DELETE from employee_payroll where name = '%s';", name);
+        try {
+            Connection connection = this.getConnection();
+            Statement statement = connection.createStatement();
+            statement.executeUpdate(sql);
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
 }

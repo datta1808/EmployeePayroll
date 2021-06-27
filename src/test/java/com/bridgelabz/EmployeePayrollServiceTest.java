@@ -98,11 +98,12 @@ public class EmployeePayrollServiceTest {
     public void given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries() {
         EmployeePayrollData[] arrayOfEmp = {
                 new EmployeePayrollData(1, "Jeff","M", 100000.0, LocalDate.now(), "Sales"),
-                new EmployeePayrollData(2, "Bill","M", 200000.0,LocalDate.now(), "Marketing"),
-                new EmployeePayrollData(3, "Mark","M", 150000.0,LocalDate.now(), "Sales"),
-                new EmployeePayrollData(4, "Sundar","M", 400000.0,LocalDate.now(), "Marketing"),
-                new EmployeePayrollData(5, "Mukesh","M", 4500000.0,LocalDate.now(),"Sales"),
-                new EmployeePayrollData(6, "Anil","M", 300000.0,LocalDate.now(), "Marketing") };
+                new EmployeePayrollData(2, "Bill","M", 200000.0, LocalDate.now(), "Marketing"),
+                new EmployeePayrollData(3, "Mark","M", 150000.0, LocalDate.now(), "Sales"),
+                new EmployeePayrollData(4, "Sundar","M", 400000.0, LocalDate.now(), "Marketing"),
+                new EmployeePayrollData(5, "Mukesh","M", 4500000.0, LocalDate.now(), "Sales"),
+                new EmployeePayrollData(6, "Anil","M", 300000.0, LocalDate.now(), "Marketing")
+        };
         EmployeePayrollService employeePayrollService = new EmployeePayrollService();
         employeePayrollService.readEmployeePayrollData(EmployeePayrollService.IOService.DB_IO);
         Instant start = Instant.now();

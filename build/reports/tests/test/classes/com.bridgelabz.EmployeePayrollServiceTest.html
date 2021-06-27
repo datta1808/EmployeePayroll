@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.533s</div>
+<div class="counter">0.508s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,7 +82,7 @@
 </thead>
 <tr>
 <td class="success">given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries</td>
-<td class="success">0.533s</td>
+<td class="success">0.508s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -90,60 +90,60 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@47f0cf9
+<pre>Processing Thread: Test workerConnecting to database with Id : 1
+Processing Thread: Test worker Id: 1 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@470906af
 Employee Being Added: Jeff
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@45b6d6e4
+Processing Thread: Test workerConnecting to database with Id : 2
+Processing Thread: Test worker Id: 2 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@4e938451
 Employee Added : Jeff
 Employee Being Added: Bill
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@6d2de3ae
+Processing Thread: Test workerConnecting to database with Id : 3
+Processing Thread: Test worker Id: 3 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@728ff2b
 Employee Added : Bill
 Employee Being Added: Mark
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@79059fbf
+Processing Thread: Test workerConnecting to database with Id : 4
+Processing Thread: Test worker Id: 4 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@6878242e
 Employee Added : Mark
 Employee Being Added: Sundar
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@14777b91
+Processing Thread: Test workerConnecting to database with Id : 5
+Processing Thread: Test worker Id: 5 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@125558c8
 Employee Added : Sundar
 Employee Being Added: Mukesh
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@6397ff74
+Processing Thread: Test workerConnecting to database with Id : 6
+Processing Thread: Test worker Id: 6 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@295297f6
 Employee Added : Mukesh
 Employee Being Added: Anil
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@3d167d72
+Processing Thread: Test workerConnecting to database with Id : 7
+Processing Thread: Test worker Id: 7 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@981bf50
 Employee Added : Anil
 [EmployeePayrollData{name='Mark', id=13, salary=5000000.0}, null, null, null, null, null, null]
-Duration without Thread: PT0.1692989S
+Duration without Thread: PT0.263407S
 Employee being Added: Jeff
+Processing Thread: JeffConnecting to database with Id : 8
 Employee being Added: Bill
 Employee being Added: Mark
+Processing Thread: BillConnecting to database with Id : 9
+Processing Thread: MarkConnecting to database with Id : 10
 Employee being Added: Sundar
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Employee being Added: Mukesh
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
+Processing Thread: SundarConnecting to database with Id : 11
 Employee being Added: Anil
-Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@59b3d57
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@1d542eeb
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@621ce972
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@591f40c3
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@451d25d7
-Employee Added: Mukesh
-Employee Added: Jeff
-Employee Added: Anil
+Processing Thread: AnilConnecting to database with Id : 12
+Processing Thread: Bill Id: 12 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@846f441
+Processing Thread: Jeff Id: 12 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@2196bb81
+Processing Thread: Mark Id: 12 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@4cc8959b
+Employee being Added: Mukesh
+Processing Thread: MukeshConnecting to database with Id : 13
+Processing Thread: Sundar Id: 13 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@64d98cec
+Processing Thread: Anil Id: 13 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@59ad25c2
+Processing Thread: Mukesh Id: 13 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@cf2ef5e
 Employee Added: Sundar
+Employee Added: Anil
+Employee Added: Mukesh
 Employee Added: Bill
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@1dd95501
+Employee Added: Jeff
 Employee Added: Mark
 [EmployeePayrollData{name='Jeff', id=1, salary=100000.0}, EmployeePayrollData{name='Bill', id=2, salary=200000.0}, EmployeePayrollData{name='Mark', id=3, salary=150000.0}, EmployeePayrollData{name='Sundar', id=4, salary=400000.0}, EmployeePayrollData{name='Mukesh', id=5, salary=4500000.0}, EmployeePayrollData{name='Anil', id=6, salary=300000.0}]
-Duration with Thread: PT0.1186118S
+Duration with Thread: PT0.0531583S
 </pre>
 </span>
 </div>
@@ -155,12 +155,12 @@ Duration with Thread: PT0.1186118S
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -213,128 +213,12 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'gender' at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
-	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
-	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
-	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
-	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
-	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
-	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
-	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
-	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -387,12 +271,12 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -445,12 +329,12 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -503,12 +387,12 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -561,12 +445,12 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -619,12 +503,12 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -677,12 +561,12 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -735,12 +619,12 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -793,12 +677,12 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
-	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:109)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -851,7 +735,123 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
+	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
+	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
+	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
+	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
+	at com.bridgelabz.EmployeePayrollServiceTest.given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries(EmployeePayrollServiceTest.java:110)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:118)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:412)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'gender' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
 	at java.base/java.lang.Thread.run(Thread.java:832)
@@ -860,7 +860,25 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
 	at java.base/java.lang.Thread.run(Thread.java:832)
@@ -869,7 +887,16 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
 	at java.base/java.lang.Thread.run(Thread.java:832)
@@ -878,43 +905,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
-	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
-	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
-	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
-	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
-	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
-	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
-	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
-	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
 	at java.base/java.lang.Thread.run(Thread.java:832)
@@ -923,16 +914,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
-	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
-	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
-	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
 	at java.base/java.lang.Thread.run(Thread.java:832)
@@ -941,7 +923,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:169)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
 	at java.base/java.lang.Thread.run(Thread.java:832)
@@ -950,7 +932,25 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
-	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:190)
 	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
 	at java.base/java.lang.Thread.run(Thread.java:832)
@@ -965,7 +965,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.3</a> at 27-Jun-2021, 11:47:19 pm</p>
+<a href="http://www.gradle.org">Gradle 6.3</a> at 28-Jun-2021, 12:50:44 am</p>
 </div>
 </div>
 </body>

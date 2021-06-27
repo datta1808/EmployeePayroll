@@ -1,6 +1,5 @@
 package com.bridgelabz;
 
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.*;
 

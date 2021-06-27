@@ -76,16 +76,35 @@ public class EmployeePayrollService {
         System.out.println(this.employeePayrollDataList);
     }
 
+    public void addEmployeesToPayrollWithThreads(List<EmployeePayrollData> employeePayrollDataList) {
+        Map<Integer, Boolean> employeeAdditionStatus = new HashMap<>();
+        employeePayrollDataList.forEach(employeePayrollData -> {
+            Runnable task = () -> {
+                employeeAdditionStatus.put(employeePayrollData.hashCode(), false);
+                System.out.println("Employee being Added: " + Thread.currentThread().getName());
+                this.addEmployeeToPayroll(employeePayrollData.name, employeePayrollData.salary, employeePayrollData.startDate, employeePayrollData.gender);
+                employeeAdditionStatus.put(employeePayrollData.hashCode(), true);
+                System.out.println("Employee Added: " + Thread.currentThread().getName());
+            };
+            Thread thread = new Thread(task, employeePayrollData.name);
+            thread.start();
+        });
+        while (employeeAdditionStatus.containsValue(false)) {
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+
+            }
+        }
+        System.out.println(employeePayrollDataList);
+    }
+
     public void addEmployeeToPayroll(String name, double salary, LocalDate startDate, String gender) {
         employeePayrollDataList.add(employeePayrollDBService.addEmployeeToPayroll(name, salary, startDate, gender));
     }
 
     public void addEmployeeToDepartment(String name,  Double salary, LocalDate startDate,String gender, String department) {
         this.employeePayrollDataList.add(employeePayrollDBService.addEmployeeToDepartment(name,  salary, startDate, gender, department));
-    }
-
-    public void addEmployeesToPayrollWithThreads(List<EmployeePayrollData> employeePayrollDataList) {
-
     }
 
     //check whether the updated record matches the record of database
@@ -130,8 +149,11 @@ public class EmployeePayrollService {
     }
 
     public void printData(IOService ioService){
-        if (ioService.equals(IOService.FILE_IO)){
+        if (ioService.equals(IOService.FILE_IO)) {
             new EmployeePayrollFileIOService().printDataFromFile();
+        }
+            else {
+                System.out.println(employeePayrollDataList);
         }
     }
 

@@ -29,6 +29,11 @@ public class EmployeePayrollData {
         this.department = department;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, gender, salary, startDate);
+    }
+
     public String getName() {
         return name;
     }
@@ -71,10 +76,5 @@ public class EmployeePayrollData {
                 Double.compare(that.salary, salary) == 0 &&
                 name.equals(that.name) &&
                 startDate.equals(that.startDate);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, salary, startDate);
     }
 }

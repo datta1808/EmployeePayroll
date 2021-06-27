@@ -1,35 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-27T17:02:57" hostname="LAPTOP-OKMRMTOT" time="1.036">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-27T18:17:19" hostname="LAPTOP-OKMRMTOT" time="0.533">
   <properties/>
-  <testcase name="given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.036"/>
+  <testcase name="given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.533"/>
   <system-out><![CDATA[Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@6878a460
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@47f0cf9
 Employee Being Added: Jeff
 Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@76bebd96
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@45b6d6e4
 Employee Added : Jeff
 Employee Being Added: Bill
 Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@648b655a
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@6d2de3ae
 Employee Added : Bill
 Employee Being Added: Mark
 Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@4b5ffd64
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@79059fbf
 Employee Added : Mark
 Employee Being Added: Sundar
 Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@1b4b935c
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@14777b91
 Employee Added : Sundar
 Employee Being Added: Mukesh
 Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@31f2a9b6
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@6397ff74
 Employee Added : Mukesh
 Employee Being Added: Anil
 Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
-Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@33bb43b8
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@3d167d72
 Employee Added : Anil
 [EmployeePayrollData{name='Mark', id=13, salary=5000000.0}, null, null, null, null, null, null]
-Duration without Thread: PT0.4031838S
+Duration without Thread: PT0.1692989S
+Employee being Added: Jeff
+Employee being Added: Bill
+Employee being Added: Mark
+Employee being Added: Sundar
+Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
+Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
+Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
+Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
+Employee being Added: Mukesh
+Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
+Employee being Added: Anil
+Connecting to database:jdbc:mysql://localhost:3306/PayrollService?useSSL=false
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@59b3d57
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@1d542eeb
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@621ce972
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@591f40c3
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@451d25d7
+Employee Added: Mukesh
+Employee Added: Jeff
+Employee Added: Anil
+Employee Added: Sundar
+Employee Added: Bill
+Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@1dd95501
+Employee Added: Mark
+[EmployeePayrollData{name='Jeff', id=1, salary=100000.0}, EmployeePayrollData{name='Bill', id=2, salary=200000.0}, EmployeePayrollData{name='Mark', id=3, salary=150000.0}, EmployeePayrollData{name='Sundar', id=4, salary=400000.0}, EmployeePayrollData{name='Mukesh', id=5, salary=4500000.0}, EmployeePayrollData{name='Anil', id=6, salary=300000.0}]
+Duration with Thread: PT0.1186118S
 ]]></system-out>
   <system-err><![CDATA[com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'gender' at row 1
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
@@ -37,7 +63,7 @@ Duration without Thread: PT0.4031838S
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -95,7 +121,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -153,7 +179,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -211,7 +237,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -269,7 +295,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -327,7 +353,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -385,7 +411,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -443,7 +469,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -501,7 +527,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -559,7 +585,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -617,7 +643,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -675,7 +701,7 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
 	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
 	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
-	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:80)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
 	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayroll$1(EmployeePayrollService.java:72)
 	at java.base/java.util.Arrays$ArrayList.forEach(Arrays.java:4203)
 	at com.bridgelabz.EmployeePayrollService.addEmployeesToPayroll(EmployeePayrollService.java:70)
@@ -726,6 +752,114 @@ com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range 
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'gender' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'gender' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'gender' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'gender' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'gender' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Data too long for column 'gender' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2113)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1340)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:166)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+com.mysql.cj.jdbc.exceptions.MysqlDataTruncation: Data truncation: Out of range value for column 'employee_id' at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:104)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdateInternal(StatementImpl.java:1335)
+	at com.mysql.cj.jdbc.StatementImpl.executeLargeUpdate(StatementImpl.java:2108)
+	at com.mysql.cj.jdbc.StatementImpl.executeUpdate(StatementImpl.java:1245)
+	at com.bridgelabz.EmployeePayrollDBService.addEmployeeToPayroll(EmployeePayrollDBService.java:187)
+	at com.bridgelabz.EmployeePayrollService.addEmployeeToPayroll(EmployeePayrollService.java:103)
+	at com.bridgelabz.EmployeePayrollService.lambda$addEmployeesToPayrollWithThreads$2(EmployeePayrollService.java:85)
 	at java.base/java.lang.Thread.run(Thread.java:832)
 ]]></system-err>
 </testsuite>

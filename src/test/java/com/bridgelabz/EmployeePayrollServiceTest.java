@@ -97,7 +97,7 @@ public class EmployeePayrollServiceTest {
     @Test
     public void given6Employees_WhenAddedToDB_ShouldMatchEmployeeEntries() {
         EmployeePayrollData[] arrayOfEmp = {
-                new EmployeePayrollData(1, "Jeff","M", 100000.0,LocalDate.now(),"Sales"),
+                new EmployeePayrollData(1, "Jeff","M", 100000.0, LocalDate.now(), "Sales"),
                 new EmployeePayrollData(2, "Bill","M", 200000.0,LocalDate.now(), "Marketing"),
                 new EmployeePayrollData(3, "Mark","M", 150000.0,LocalDate.now(), "Sales"),
                 new EmployeePayrollData(4, "Sundar","M", 400000.0,LocalDate.now(), "Marketing"),
@@ -109,7 +109,11 @@ public class EmployeePayrollServiceTest {
         employeePayrollService.addEmployeesToPayroll(Arrays.asList(arrayOfEmp));
         Instant end = Instant.now();
         System.out.println("Duration without Thread: " + Duration.between(start, end));
+        Instant threadStart = Instant.now();
+        employeePayrollService.addEmployeesToPayrollWithThreads(Arrays.asList(arrayOfEmp));
+        Instant threadEnd = Instant.now();
+        System.out.println("Duration with Thread: " + Duration.between(threadStart, threadEnd));
         long result = employeePayrollService.countEntries(EmployeePayrollService.IOService.DB_IO);
-        Assert.assertEquals(7, result);
+        Assert.assertEquals(13, result);
     }
 }

@@ -36,6 +36,7 @@ public class EmployeePayrollServiceTest {
         Assert.assertEquals(3, employeePayrollData.size());
     }
 
+
     @Test
     public void givenNewSalaryForEmployee_WhenUpdated_ShouldSyncWithDatabase() {
         EmployeePayrollService employeePayrollService = new EmployeePayrollService();

@@ -1,6 +1,5 @@
 package com.bridgelabz;
 
-import com.mysql.cj.result.SqlDateValueFactory;
 
 import java.sql.*;
 import java.time.LocalDate;

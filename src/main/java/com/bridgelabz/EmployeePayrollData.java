@@ -10,6 +10,7 @@ public class EmployeePayrollData {
     public LocalDate startDate;
     public String department;
     public boolean is_active;
+    public String gender;
 
 
     public EmployeePayrollData(int id, String name, double salary) {

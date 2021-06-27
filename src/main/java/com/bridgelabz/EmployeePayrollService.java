@@ -66,12 +66,26 @@ public class EmployeePayrollService {
                    .orElse(null);
     }
 
+    public void addEmployeesToPayroll(List<EmployeePayrollData> employeePayrollDataList) {
+        employeePayrollDataList.forEach(employeePayrollData -> {
+            System.out.println("Employee Being Added: " + employeePayrollData.name);
+            this.addEmployeeToPayroll(employeePayrollData.name, employeePayrollData.salary,
+                    employeePayrollData.startDate, employeePayrollData.gender);
+            System.out.println("Employee Added : " + employeePayrollData.name);
+        });
+        System.out.println(this.employeePayrollDataList);
+    }
+
     public void addEmployeeToPayroll(String name, double salary, LocalDate startDate, String gender) {
         employeePayrollDataList.add(employeePayrollDBService.addEmployeeToPayroll(name, salary, startDate, gender));
     }
 
     public void addEmployeeToDepartment(String name,  Double salary, LocalDate startDate,String gender, String department) {
         this.employeePayrollDataList.add(employeePayrollDBService.addEmployeeToDepartment(name,  salary, startDate, gender, department));
+    }
+
+    public void addEmployeesToPayrollWithThreads(List<EmployeePayrollData> employeePayrollDataList) {
+
     }
 
     //check whether the updated record matches the record of database
@@ -110,11 +124,9 @@ public class EmployeePayrollService {
     }
 
     public long countEntries(IOService ioService) {
-        if (ioService.equals(IOService.CONSOLE_IO))
-            return employeePayrollDataList.size();
-        else if (ioService.equals(IOService.FILE_IO))
+        if (ioService.equals(IOService.FILE_IO))
             return EmployeePayrollFileIOService.countEntries();
-        return 0;
+        return employeePayrollDataList.size();
     }
 
     public void printData(IOService ioService){

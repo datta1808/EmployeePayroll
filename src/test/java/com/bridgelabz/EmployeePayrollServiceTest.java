@@ -8,6 +8,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -79,7 +80,7 @@ public class EmployeePayrollServiceTest {
 
 
     @Test
-    public void givenNewEmployee_WhenAddedToPayroll_ShouldBeAddedToDepartment() {
+    public void givenNewEmployee_WhenAddedToPayroll_ShouldBeAddedToDepartment() throws SQLException {
         EmployeePayrollService employeePayrollService = new EmployeePayrollService();
         employeePayrollService.readEmployeePayrollData(EmployeePayrollService.IOService.DB_IO);
         employeePayrollService.addEmployeeToDepartment("Max", 400000.00, LocalDate.now(), "M", "Sales");
@@ -116,5 +117,20 @@ public class EmployeePayrollServiceTest {
         System.out.println("Duration with Thread: " + Duration.between(threadStart, threadEnd));
         long result = employeePayrollService.countEntries(EmployeePayrollService.IOService.DB_IO);
         Assert.assertEquals(13, result);
+    }
+
+    @Test
+    public void given2Employees_WhenUpdatedSalary_ShouldSyncWithDB() throws SQLException {
+        Map<String, Double> salaryMap = new HashMap<>();
+        salaryMap.put("Bill Gates",700000.0);
+        salaryMap.put("Mukesh",800000.0);
+        EmployeePayrollService employeePayrollService = new EmployeePayrollService();
+        employeePayrollService.readEmployeePayrollData(EmployeePayrollService.IOService.DB_IO);
+        Instant start = Instant.now();
+        employeePayrollService.updatePayroll(salaryMap);
+        Instant end = Instant.now();
+        System.out.println("Duration with Thread: " + Duration.between(start, end));
+        boolean result = employeePayrollService.checkEmployeeDataSync("Bill, Mukesh");
+        Assert.assertEquals(true, result);
     }
 }

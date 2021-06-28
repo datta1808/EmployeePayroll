@@ -1,5 +1,6 @@
 package com.bridgelabz;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.*;
 
@@ -108,7 +109,7 @@ public class EmployeePayrollService {
     }
 
     //check whether the updated record matches the record of database
-    public boolean checkEmployeeDataSync(String name) {
+    public boolean checkEmployeeDataSync(String name) throws SQLException {
         List<EmployeePayrollData> employees = null;
         employees = employeePayrollDBService.getEmployeePayrollData(name);
         return employees.get(0).equals(getEmployeePayrollData(name));
@@ -123,6 +124,9 @@ public class EmployeePayrollService {
         List<EmployeePayrollData> activeEmployees = null;
         activeEmployees = employeePayrollDBService.removeEmployeeFromCompany(id);
         return activeEmployees;
+    }
+
+    public void updatePayroll(Map<String, Double> salaryMap) {
     }
 
     public enum IOService {
@@ -162,6 +166,7 @@ public class EmployeePayrollService {
             new EmployeePayrollFileIOService().readDataFromFile();
         }
     }
+    
 
     public static void main(String[] args) {
         ArrayList<EmployeePayrollData> employeePayrollDataList = new ArrayList<>();

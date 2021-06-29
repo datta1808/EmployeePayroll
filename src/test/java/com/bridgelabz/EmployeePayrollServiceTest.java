@@ -1,6 +1,10 @@
 package com.bridgelabz;
 
+import com.google.gson.Gson;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.sql.SQLException;
@@ -132,5 +136,27 @@ public class EmployeePayrollServiceTest {
         System.out.println("Duration with Thread: " + Duration.between(start, end));
         boolean result = employeePayrollService.checkEmployeeDataSync("Bill, Mukesh");
         Assert.assertEquals(true, result);
+    }
+
+    @Before
+    public void setup() {
+        RestAssured.baseURI = "http://localhost";
+        RestAssured.port = 3000;
+    }
+
+    private EmployeePayrollData[] getEmployeeList() {
+        Response response = RestAssured.get("/employee_payroll");
+        System.out.println("EMPLOYEE PAYROLL ENTRIES IN JSONServer:\n" + response.asString());
+        EmployeePayrollData[] arrayOfEmps = new Gson().fromJson(response.asString(), EmployeePayrollData[].class);
+        return arrayOfEmps;
+    }
+
+    @Test
+    public void givenEmployeeDataInJSONServer_WhenRetrieved_ShouldMatchTheCount() {
+        EmployeePayrollData[] arrayOfEmps = getEmployeeList();
+        EmployeePayrollService employeePayrollService;
+        employeePayrollService = new EmployeePayrollService(Arrays.asList(arrayOfEmps));
+        long entries = employeePayrollService.countEntries(EmployeePayrollService.IOService.REST_IO);
+        Assert.assertEquals(2, entries);
     }
 }

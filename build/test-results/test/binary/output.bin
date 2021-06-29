@@ -1,5 +1,0 @@
-BProcessing Thread: Test workerConnecting to database with Id : 1
-lProcessing Thread: Test worker Id: 1 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@7a4ff4d0
-Duration with Thread: PT0S
-BProcessing Thread: Test workerConnecting to database with Id : 2
-lProcessing Thread: Test worker Id: 2 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@4e938451

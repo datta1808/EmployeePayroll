@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-06-28T08:45:37" hostname="LAPTOP-OKMRMTOT" time="1.045">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-06-29T09:11:53" hostname="LAPTOP-OKMRMTOT" time="0.262">
   <properties/>
-  <testcase name="given2Employees_WhenUpdatedSalary_ShouldSyncWithDB" classname="com.bridgelabz.EmployeePayrollServiceTest" time="1.045">
-    <failure message="java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0" type="java.lang.IndexOutOfBoundsException">java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:373)
-	at java.base/java.util.ArrayList.get(ArrayList.java:427)
-	at com.bridgelabz.EmployeePayrollService.checkEmployeeDataSync(EmployeePayrollService.java:115)
-	at com.bridgelabz.EmployeePayrollServiceTest.given2Employees_WhenUpdatedSalary_ShouldSyncWithDB(EmployeePayrollServiceTest.java:133)
+  <testcase name="givenEmployeeDataInJSONServer_WhenRetrieved_ShouldMatchTheCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.262">
+    <failure message="java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
+	at io.restassured.config.ObjectMapperConfig.&lt;init&gt;(ObjectMapperConfig.java:49)
+	at io.restassured.config.RestAssuredConfig.&lt;init&gt;(RestAssuredConfig.java:41)
+	at io.restassured.RestAssured.&lt;clinit&gt;(RestAssured.java:420)
+	at com.bridgelabz.EmployeePayrollServiceTest.setup(EmployeePayrollServiceTest.java:143)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -17,7 +14,7 @@
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
 	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
@@ -57,13 +54,13 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.base/java.lang.Thread.run(Thread.java:832)
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.JAXBException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 51 more
 </failure>
   </testcase>
-  <system-out><![CDATA[Processing Thread: Test workerConnecting to database with Id : 1
-Processing Thread: Test worker Id: 1 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@7a4ff4d0
-Duration with Thread: PT0S
-Processing Thread: Test workerConnecting to database with Id : 2
-Processing Thread: Test worker Id: 2 Connection is successful!!!!com.mysql.cj.jdbc.ConnectionImpl@4e938451
-]]></system-out>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

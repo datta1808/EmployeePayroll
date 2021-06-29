@@ -26,7 +26,7 @@ public class EmployeePayrollService {
         String name = sc.nextLine();
         System.out.println("Enter Employee salary: ");
         double salary = sc.nextDouble();
-        employeePayrollDataList.add(new EmployeePayrollData(id, name, salary));
+        employeePayrollDataList.add(new EmployeePayrollData(id, name, 'M', salary, LocalDate.now()));
     }
 
     public List<EmployeePayrollData> readEmployeePayrollData(IOService ioService) {
@@ -127,6 +127,14 @@ public class EmployeePayrollService {
     }
 
     public void updatePayroll(Map<String, Double> salaryMap) {
+    }
+
+    public void addEmployeeToPayroll(EmployeePayrollData employeePayrollData, IOService restIo) {
+        IOService ioService = null;
+        if(ioService.equals(IOService.DB_IO))
+            this.addEmployeeToPayroll(employeePayrollData.name,employeePayrollData.salary,
+                    employeePayrollData.startDate, employeePayrollData.gender);
+        else employeePayrollDataList.add(employeePayrollData);
     }
 
     public enum IOService {

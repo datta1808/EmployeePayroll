@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-06-29T09:11:53" hostname="LAPTOP-OKMRMTOT" time="0.262">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-06-29T10:34:14" hostname="LAPTOP-OKMRMTOT" time="0.421">
   <properties/>
-  <testcase name="givenEmployeeDataInJSONServer_WhenRetrieved_ShouldMatchTheCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.262">
+  <testcase name="givenEmployeeDataInJSONServer_WhenRetrieved_ShouldMatchTheCount" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.421">
     <failure message="java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException
 	at io.restassured.config.ObjectMapperConfig.&lt;init&gt;(ObjectMapperConfig.java:49)
 	at io.restassured.config.RestAssuredConfig.&lt;init&gt;(RestAssuredConfig.java:41)
 	at io.restassured.RestAssured.&lt;clinit&gt;(RestAssured.java:420)
-	at com.bridgelabz.EmployeePayrollServiceTest.setup(EmployeePayrollServiceTest.java:143)
+	at com.bridgelabz.EmployeePayrollServiceTest.setup(EmployeePayrollServiceTest.java:144)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

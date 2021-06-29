@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
@@ -52,9 +53,9 @@ public class NIOFileAPITest {
     @Test
     public void numberOfEmployeeEntryTest() {
         EmployeePayrollData[] empArray = {
-                new EmployeePayrollData(1, "Jeff Bezos", 100000.0),
-                new EmployeePayrollData(2, "Bill Gates", 200000.0),
-                new EmployeePayrollData(3, "Mark Zuckerberg", 300000.0)
+                new EmployeePayrollData(1, "Jeff Bezos", 'M', 100000.0, LocalDate.now()),
+                new EmployeePayrollData(2, "Bill Gates", 'M', 200000.0, LocalDate.now()),
+                new EmployeePayrollData(3, "Mark Zuckerberg", 'M', 300000.0, LocalDate.now())
         };
 
         EmployeePayrollService employeePayrollService = new EmployeePayrollService(Arrays.asList(empArray));

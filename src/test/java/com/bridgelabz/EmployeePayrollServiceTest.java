@@ -3,6 +3,7 @@ package com.bridgelabz;
 import com.google.gson.Gson;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,9 +22,9 @@ public class EmployeePayrollServiceTest {
     @Test
     public void numberOfEmployeeEntryTest() {
         EmployeePayrollData[] empArray = {
-                new EmployeePayrollData(1, "Jeff Bezos", 100000.0),
-                new EmployeePayrollData(2, "Bill Gates", 200000.0),
-                new EmployeePayrollData(3, "Mark Zuckerberg", 300000.0)
+                new EmployeePayrollData(1, "Jeff Bezos", 'M', 100000.0, LocalDate.now()),
+                new EmployeePayrollData(2, "Bill Gates", 'M', 200000.0, LocalDate.now()),
+                new EmployeePayrollData(3, "Mark Zuckerberg", 'M', 300000.0, LocalDate.now())
         };
 
         EmployeePayrollService employeePayrollService = new EmployeePayrollService(Arrays.asList(empArray));
@@ -145,10 +146,18 @@ public class EmployeePayrollServiceTest {
     }
 
     private EmployeePayrollData[] getEmployeeList() {
-        Response response = RestAssured.get("/employee_payroll");
+        Response response = RestAssured.get("/employees");
         System.out.println("EMPLOYEE PAYROLL ENTRIES IN JSONServer:\n" + response.asString());
         EmployeePayrollData[] arrayOfEmps = new Gson().fromJson(response.asString(), EmployeePayrollData[].class);
         return arrayOfEmps;
+    }
+
+    public Response addEmployeeToJsonServer(EmployeePayrollData employeePayrollData){
+        String empJson = new Gson().toJson(employeePayrollData);
+        RequestSpecification requestSpecification = RestAssured.given();
+        requestSpecification.header("Content-Type","application/json");
+        requestSpecification.body(empJson);
+        return requestSpecification.post("/employees");
     }
 
     @Test
@@ -157,6 +166,24 @@ public class EmployeePayrollServiceTest {
         EmployeePayrollService employeePayrollService;
         employeePayrollService = new EmployeePayrollService(Arrays.asList(arrayOfEmps));
         long entries = employeePayrollService.countEntries(EmployeePayrollService.IOService.REST_IO);
-        Assert.assertEquals(2, entries);
+        Assert.assertEquals(3, entries);
+    }
+
+    @Test
+    public void givenNewEmployee_WhenAdded_ShouldMatch201ResponseAndCount(){
+        EmployeePayrollService employeePayrollService;
+        EmployeePayrollData[] arrayOfEmps = getEmployeeList();
+        employeePayrollService = new EmployeePayrollService(Arrays.asList(arrayOfEmps));
+
+        EmployeePayrollData employeePayrollData = null;
+        employeePayrollData = new EmployeePayrollData(3,"Mark Zuckerberg",'M', 300000.00 , LocalDate.now());
+        Response response = addEmployeeToJsonServer(employeePayrollData);
+        int statusCode = response.getStatusCode();
+        Assert.assertEquals(201, statusCode);
+
+        employeePayrollData = new Gson().fromJson(response.asString(), EmployeePayrollData.class);
+        employeePayrollService.addEmployeeToPayroll(employeePayrollData, EmployeePayrollService.IOService.REST_IO);
+        long entries = employeePayrollService.countEntries(EmployeePayrollService.IOService.REST_IO);
+        Assert.assertEquals(3,entries);
     }
 }
